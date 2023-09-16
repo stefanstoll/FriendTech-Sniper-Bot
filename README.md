@@ -8,7 +8,7 @@ This is the leading MEV software to snipe new keys on FriendTech. Below is how t
 
 1) Download the package onto your computer, make sure you have NodeJS installed on your computer
 2) Set up a MetaMask wallet and add some funds on the Base blockchain
-3) Copy the smart contract "snipe.sol" into Remix or your platform of choice and deploy it on the Base blockchain
+3) Copy the smart contract "snipe.sol" into Remix or your platform of choice and deploy it on the Base blockchain (parameter is FriendTech contract address => 0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4)
 4) Create 10 new addresses on the Base blockchain (I use Metamask) (all of these accounts need to have ETH for gas fees, 0.1 min probably)
 5) Use the whitelist function on your deployed smart contract to whitelist all of your 10 addresses
 6) Deposit some ETH into your deployed smart contract
