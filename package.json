@@ -1,0 +1,27 @@
+{
+  "name": "friendtech-sniper",
+  "version": "1.0.0",
+  "description": "",
+  "author": "stefanstoll <imstefan@icloud.com>",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "autoSnipe": "ts-node autoSnipe.ts",
+    "autoSniper": "ts-node autoSniper.ts",
+    "sniper": "ts-node sniper.ts",
+    "manualSnipe": "ts-node manualSnipe.ts",
+    "manualSniper": "ts-node manualSniper.ts"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "tree-kill": "^1.2.2",
+    "twit": "^2.2.11",
+    "viem": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/twit": "^2.2.32",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}

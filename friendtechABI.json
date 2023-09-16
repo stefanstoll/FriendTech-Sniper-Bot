@@ -1,0 +1,27 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": false, "internalType": "address", "name": "trader", "type": "address"},
+      {"indexed": false, "internalType": "address", "name": "subject", "type": "address"},
+      {"indexed": false, "internalType": "bool", "name": "isBuy", "type": "bool"},
+      {"indexed": false, "internalType": "uint256", "name": "shareAmount", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "ethAmount", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "protocolEthAmount", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "subjectEthAmount", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "supply", "type": "uint256"}
+    ],
+    "name": "Trade",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {"internalType": "address", "name": "sharesSubject", "type": "address"},
+      {"internalType": "uint256", "name": "amount", "type": "uint256"}
+    ],
+    "name": "buyShares",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]
