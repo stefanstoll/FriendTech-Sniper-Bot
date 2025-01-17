@@ -1,5 +1,5 @@
 # FriendTech-Sniper-Bot
-The best MEV bot to snipe on FriendTech (Worked flawlessly on my side, but I just threw it all on Github without making it user-friendly). If people are actually interested, let me know @ imstefanstoll@gmail.com and I can try a bit harder and make it user-friendly. This software led the market the past week (30%-60%) and beat competition. At the time of writing, 2-3 competitors had software on the same level.
+The best MEV bot to snipe on FriendTech (Worked flawlessly on my side, but I just threw it all on Github without making it user-friendly). If people are actually interested, let me know @ and I can try a bit harder and make it user-friendly. This software led the market the past week (30%-60%) and beat competition. At the time of writing, 2-3 competitors had software on the same level.
 
 Big Picture: We send a ton of transactions every block to the Base blockchain, hoping our transaction occurs right after a user buys their first key.
 Flow is like this => When a new user deposits funds, you can start the manualSnipe script and your computer or server will start sending a lot of calls to a smart contract you deployed. The smart contract contains a pool of your assets and when called, will call the FriendTech contract and buy, hold, and sell keys. By creating a proxy smart contract to interact with the FriendTech contract, we can efficiently use our pool of assets, rather then keeping them an EOAs. (more size, more speed)
@@ -9,7 +9,7 @@ This is the leading MEV software to snipe new keys on FriendTech. Below is how t
 1) Download the package onto your computer, make sure you have NodeJS installed on your computer
 2) Set up a MetaMask wallet and add some funds on the Base blockchain
 3) Copy the smart contract "snipe.sol" into Remix or your platform of choice and deploy it on the Base blockchain (parameter is FriendTech contract address => 0xcf205808ed36593aa40a44f10c7f7c2f67d4a4d4)
-4) Create 10 new addresses on the Base blockchain (I use Metamask) (all of these accounts need to have ETH for gas fees, 0.1 min)
+4) Create 10 new addresses on the Base blockchain (all of these accounts need to have ETH for gas fees, 0.1 min)
 5) Use the whitelist function on your deployed smart contract to whitelist all of your 10 addresses. (Only whitelisted addresses can call the smart contract)
 6) Deposit some ETH into your deployed smart contract. (This pool of ETH will be used to buy and sell keys on FriendTech)
 7) Update the following:
@@ -29,6 +29,5 @@ Now you have 2 modes to run
 1) npm run manualSnipe => This is for manual sniping. You provide a user's address (from a monitor, check my github for the monitor setup), how many keys you want to snipe, and a delay time (in milliseconds) and the bot will start running and attempt to buy a user's key until it reaches max retries or the script is stopped by the user
 2) npm run autoSnipe => This creates an in-house monitor that actively watches for new users, checks their Twitter metrics, and begins a snipe if it thinks its solid from a simple algo. Sends Discord notification when snipes starts, so you can cancel out if you want to. Everything is automated, but you should customize the code to your liking. You also run chmod +x restartScript.sh and then start the script with ./restartScript.sh if you want it to continuously run (24/7).
 
-I understand the code/setup is not exactly new user friendly and pretty complicated, so if there is enough interest, I can make this very user friendly or answer any questions/bugs anyone has if I have time. The software worked very well for me, open-sourcing becuase I have to go back to work on other things and competition is high. Feel free to reach out to me @ imstefanstoll@gmail.com if you have any questions.
 
 Disclaimer: Please interact with the software at your own risk, I am not responsible for any financial loss or any downside caused by it. I cannot guarantee any results from it. The software is not an offering from me. I share no responsibility for the usage and outcome of this now open-sourced software.
